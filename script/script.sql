@@ -1,0 +1,10 @@
+CREATE DATABASE PRACTICA;
+
+USE PRACTICA;
+
+CREATE TABLE ejemplo(
+    id TINYINT PRIMARY KEY,
+    rol VARCHAR(20)
+);
+
+INSERT INTO ejemplo VALUES(1,'usuario'); 
