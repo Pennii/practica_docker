@@ -11,7 +11,7 @@
     <h1>Pagina de practica de docker</h1>
     <?php
     try {
-        $conexion = new PDO('mysql:host=mysql_server;dbname=PRACTICA', 'root', 'clave');
+        $conexion = new PDO('mysql:host=mysql_serverr;dbname=PRACTICA', 'root', 'clave');
     } catch (\Throwable $th) {
         echo $th->getMessage();
     }

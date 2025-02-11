@@ -3,11 +3,15 @@ services:
     build:
       context: ./
       dockerfile: dockerfile
-    container_name: apache_server
+    container_name: apache_serverr
     ports:
-      - 8080:80
+      - 80:80
+      - 443:443
     volumes:
       - ./vistas:/var/www/html
+      - ./localhost.crt:/etc/ssl/certs/localhost.crt
+      - ./localhost.key:/etc/ssl/private/localhost.key
+      - ./default-ssl.conf:/etc/apache2/sites-available/default-ssl.conf
     networks:
       - red1
     depends_on:
@@ -16,7 +20,7 @@ services:
   
   db:
     image: mysql
-    container_name: mysql_server
+    container_name: mysql_serverr
     ports:
       - 3306:3306
     environment:
